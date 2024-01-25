@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOX - JavaScript Cheatsheet</title>
+</head>
+<body>
+    
+    <div>
+        <p class="p-class" id="p-tag">This is the first element document.querySelector returns;</p>
+
+        <!-- document.querySelector() can be used to target with certain attributes; example
+        via class, or id, document.querySelector(".p-class") or document.querySelector("#p-tag") -->
+        <p class="p-class" id="p-tag">This P tag is used for demonstrating Target concept querySelector in JS;</p>
+
+        <!-- for this we've used document.getElementById() -->
+        <p id="target-by-id" >Hello I am Target by ID</p>
+
+        <!-- input for value target -->
+        <input type="text" value="Hello I Am input Text" id="text-input" class="text-input" />
+        <!-- for querySelector() -->
+        <input type="text" value="Hello QuerySelector Input()" id="text-input-2" class="text-input" />
+
+        <!-- working with data attributes https://www.w3schools.com/tags/att_data-.asp-->
+        <p id="p-element-with-data" data-current-item="1">P Element with Data Attribute</p>
+        <input id="input-element-with-data" type="number" value="123" data-age="24"/> 
+        <div id="div-element-with-data" data-block="new">
+            <!-- div with data attribute-->
+        </div>
+        
+        <div>
+            <button type="button" id="show-message-btn">Click to Show Message</button>
+            <button type="button" id="hide-message-btn">Click to hide message</button>
+
+            <p id="hidden-message" style="display:none;">
+                "Hidden message" is now showing;
+            </p>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
