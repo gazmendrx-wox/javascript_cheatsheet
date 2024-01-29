@@ -78,3 +78,107 @@ const btnHideMessage = document.getElementById('hide-message-btn');
 btnHideMessage.addEventListener("click", function(){
     document.getElementById('hidden-message').style.display = 'none';
 })
+
+/**
+ * Arrays 
+ */
+const name = 'emri im';
+const array = ['emri1', 'emri2', 'emri3', 'emri4'];
+// You can access arrays directly by using index key, example array[0], array[1] etc;
+//console.log(array[1]); 
+
+/**
+ * Array methods -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+ * join();
+ * slice();
+ * indexOf();
+ * push();
+ * pop();
+ * splice();
+ * length;
+ */
+array.push('emri5'); //added a new value to array
+
+/**
+ * Conditionals
+ * 
+ * > - greater than
+ * >= - greater or equals to
+ * < - less than
+ * <= - less than or equals to
+ * == - equals to (no type check)
+ * === - equals to strict check
+ * !== - not equals to
+ * 
+ * output of this is boolean value, true or false;
+ */
+//console.log(5 > 6);
+//console.log(5 >= 4);
+//console.log(5 < 6);
+//console.log(5 <= 6);
+//console.log(5 == 6);
+//console.log(5 == '5');
+//console.log(5 === 5);
+//console.log(5 !== 6);
+
+//filter and return an array that matches the condition/conditionals example item === 'test';
+/**
+ * array - our array/value;
+ * .filter - method, ( (itemOfArray) => condition )
+ * 
+ * ** behind the scenes functionality **
+ * array.filter( (array[0]) => array[0] !== 'emri3' ) //true 
+ * array.filter( (array[1]) => array[1] !== 'emri3' ) //true
+ * array.filter( (array[2]) => array[2] !== 'emri3' ) //false
+ * array.filter( (array[3]) => array[3] !== 'emri3' ) //true
+ * array.filter( (array[4]) => array[4] !== 'emri3' ) //true
+ * 
+ * array = [array[0], array[1], array[3], array[4]];
+ * return array;
+ */
+//console.log(array.filter((item) => item !== 'emri2'));
+
+//map an array; Map is used to transform arrays;
+/**
+ * array - our array/value;
+ * .map - method, ( (itemOfArray) => callback/function )
+ * 
+ * ** behind the scenes functionality **
+ * array.map( (array[0]) => { return array[0] + 'hello' } )
+ * array.map( (array[1]) => { return array[1] + 'hello' } )
+ * array.map( (array[2]) => { return array[2] + 'hello' } )
+ * array.map( (array[3]) => { return array[3] + 'hello' } )
+ * array.map( (array[4]) => { return array[4] + 'hello' } )
+ * 
+ * array = [array[0], array[1], array[2], array[3], array[4]];
+ * return array;
+ */
+
+//vec volksvagen edhe volvo; 
+//const arrayOfGolfAndVolvo = array.filter((item) => item == 'golf' || item == 'volvo');
+//const redCars = arrayOfGolfAndVolvo.filter((item) => item.color == 'red);
+//const yellowCars = arrayOfGoldAndVolvo.filter((item) => item.color == 'yellow');
+
+const manipulatedArray = array.map((item) => {
+    if(item == 'emri1') {
+        return item + 'notHello'
+    }
+
+    return item + 'hello'
+});
+
+console.log(manipulatedArray);
+//objects
+
+//creating elements;
+
+//casja ne problem
+
+/**
+ * next session;
+ */
+//eventListeners
+
+//Math object
+
+//arrow functions
