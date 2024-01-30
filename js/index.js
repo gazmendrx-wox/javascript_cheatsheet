@@ -167,8 +167,102 @@ const manipulatedArray = array.map((item) => {
     return item + 'hello'
 });
 
-console.log(manipulatedArray);
-//objects
+//console.log(manipulatedArray);
+
+/**
+ * Objects - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects
+ * 
+ * Objects can contain information, and functions a.k.a methods;
+ * 
+ * example: 
+ * 
+ * const human = {
+ *  name: 'gazmend',
+ *  age: '30',
+ *  greet: function() {
+ *      return 'Hello from' + this.name // Hello from Gazmend
+ *  }
+ * }
+ * 
+ * const developer = {
+ *  name: 'Gazmend'
+ * }
+ * 
+ * variables, example: const developer = 'Gazmend', 
+ * sa vjet pervoj i ka gazmendi??
+ * a ka ble patika a jo??
+ * 
+ * const buyer = {
+ *  name: 'Gazmend',
+ *  aKaBlePatikaAJo: false,
+ *  patikatEReja: []
+ * }
+ * 
+ * buyer.aKaBlePatikaAJo // false;
+ * 
+ * Add button -> buyer.patikatEReja.push({id: 1, name: 'Air Max', price: 250})
+ * buyer.aKaBlePatikaAjo = true
+ * 
+ * buyer = {
+ *  name: 'Gazmend',
+ *  aKaBlePatikaAJo: true,
+ *  patikatEReja: [{id: 1, name: 'Air Max', price: 250}]
+ * }
+ */
+
+// 1 shopping cart; 
+//shopping cart has items (array), 
+//items have name and price, 
+//shopping cart can add and remove items from cart;
+const item = {
+    id: 1,
+    name: 'Air Max',
+    price: 250
+}
+
+//nese ky button eshte per me shtu add to cart = 1 item
+// buttonAddToCart.addEventListener('click', function() {
+//     const name = document.getElementById('item-1').dataset.name;
+//     const price = document.getElementById('item-1').dataset.price;
+//     const item = {
+//         name: name,
+//         price: price
+//     }
+
+//     items.push(item);
+// });
+const items = [item];
+const shoppingCart = {
+    items: [], //array of items; 
+    addToCart: function(item) {
+        this.items.push(item);
+    },
+    removeFromCart: function(itemId) {
+        this.items = this.items.filter((item) => item.id !== itemId)
+    }
+};
+
+console.log(shoppingCart.items);
+
+
+buttonAddToCart.addEventListener('click', function() {
+    const name = document.getElementById('item-1').dataset.name;
+    const price = document.getElementById('item-1').dataset.price;
+    const item = {
+        id: 1,
+        name: name,
+        price: price
+    }
+
+    shoppingCart.addToCart(item);
+});
+
+console.log(shoppingCart.items);
+
+//me kriju nje object
+
+//me shtu ne array
+
 
 //creating elements;
 
